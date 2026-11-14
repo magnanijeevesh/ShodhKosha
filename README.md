@@ -1,11 +1,19 @@
 # ShodhKosha
 
-An academic reference manager for the desktop. Import PDFs, have a local AI
-model summarise, tag and file them, read and annotate them, and copy
-BibTeX entries.
+An offline academic reference manager for Windows.
 
-Everything runs on this computer. The only internet use is the optional
-"Look Up DOI Online" button, which sends a DOI to Crossref.
+- **Import** PDFs by drag and drop, file or whole folder, with duplicate detection.
+- **Local AI** summarises, tags and files each paper into folders (Ollama).
+- **Search** every page of every paper, including scanned ones (Tesseract OCR).
+- **Read and annotate**: highlights, notes, text boxes, pen and arrows, saved
+  safely into the PDF. Dark pages and read-aloud included.
+- **Study cards** written by the local AI, exportable to Anki.
+- **BibTeX** for one reference or a whole filtered list.
+
+Everything runs on your computer. The only internet use is the DOI lookup,
+which sends a paper's DOI to Crossref and can be switched off.
+
+**Full step-by-step instructions: [INSTALL.md](INSTALL.md)**
 
 ## Setup (Windows)
 
@@ -59,3 +67,12 @@ Back up that folder to back up the whole library.
 | `annotation_export.py` | Highlights and notes as Markdown |
 | `study_cards.py`, `study_cards_widget.py` | AI study cards and Anki export |
 | `run_shodhkosha.py` (top folder) | Entry point for building the .exe |
+
+## License
+
+ShodhKosha is free software released under the GNU Affero General Public
+License, version 3. See [LICENSE](LICENSE).
+
+It is built on PyQt6 (GPL v3) and PyMuPDF (AGPL v3). If you distribute
+ShodhKosha or a modified version, you must make the source code available
+under the same license.
